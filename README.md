@@ -1,28 +1,31 @@
-# Getting and Cleaning Data Course Project
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+# Coursera Assignment
 
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
+The assignment includes the following files:
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+'README.md'
 
-Here are the data for the project:
+'codebook.md': A description of the variables
 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+'run_analysis.R': The script.
 
-You should create one R script called run_analysis.R that does the following.
+'TidyData.txt' : The output of the scripts
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names.
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-Good luck!
+# Using the Script:
 
+The working directory should be set up where the "UCI HAR Dataset" directory is located, to run the script. The output file is TidyData.txt and is can be read using the following lines:
 
-# Steps to reproduce this project
-1. Make sure UCI HAR Dataset folder is in your working directory
-2. Run the R script run_analysis.R
+data <- read.table("TidyData.txt", header = TRUE) View(data)
 
-# Outputs 
-1. This script will generate cleanData.txt in UCI HAR Dataset folder
+# Script description:
 
+Inside the script there is a line which describes what it´s being done step by step
+
+- First the column names of the variables are extracted
+- Then activity names are extracted
+- The train dataset is read, and attached to their corresponding activity and subject
+- The test dataset is read, and attached to their corresponding activity and subject
+- Join the test and train dataset
+- Select the relevant columns (the ones ending in "mean()" and "std()". The variables containing "meanFreq()" were not considered on purpose.
+- The column names are assigned
+- The ds variable is generated contains the tidy dataset for point 4
+- The table for point 5 is generated. It can be found in the working directory as "TidyData.txt"
