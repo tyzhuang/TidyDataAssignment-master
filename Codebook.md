@@ -1,4 +1,4 @@
-This code book summarises the data fields in 'TidyData.txt'  
+This code book summarises the data fields in 'cleanData.txt'  
   
 #Identifiers  
   
