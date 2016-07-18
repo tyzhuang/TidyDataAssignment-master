@@ -50,5 +50,5 @@ meltData = melt(mergeData, id = columnLabels, measure.vars = datacolumnLabels)
 cleanData   = dcast(meltData, subject + Activity_Label ~ variable, mean)
 
 #Output File
-write.table(cleanData, file = "./UCI HAR Dataset/cleanData.txt",row.name=FALSE)
+write.table(cleanData, file = "./UCI HAR Dataset/TidyData.txt",row.name=FALSE)
 }
