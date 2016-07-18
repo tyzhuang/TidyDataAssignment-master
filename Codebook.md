@@ -1,40 +1,44 @@
 # Variable List for run_analysis.R
+# Total of 13 variables 
 
-actv_labels:
+1)activity_labels:
 - To store data of activity_labels.txt
 
-features:
+2)features:
 - To store data of features.txt
 
-xTrain:
+3)xTrain:
 - To store data of X_train.txt
 
-yTrain:
+4)yTrain:
 - To store data of Y_train.txt
 
-subTrain:
+5)subTrain:
 - To store data of subject_train.txt
 
-xTest:
+6)xTest:
 - To store data of X_test.txt
 
-yTest:
+7)yTest:
 - To store data of Y_test.txt
 
-subTest:
+8)subTest:
 - To store data of subject_test.txt
 
-extract_features:
+9)extract_features:
 - to store extracted features data containing mean or std
 
-testData:
+10)testData:
 - Data combining subTest,xTest and yTest
 
-trainData:
+11)trainData:
 - Data combining subTrain,xTrain and yTrain
 
-mergeData:
+12)mergeData:
 -Data merged for testData and trainData
 
-cleanData:
+13)cleanData:
 - Tidy Data set
+
+
+
