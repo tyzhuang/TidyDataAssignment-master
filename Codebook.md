@@ -1,11 +1,11 @@
 This code book summarises the data fields in 'TidyData.txt'  
   
-Identifiers  
+#Identifiers  
   
 'subject' - the ID of the test subject (Test, Train)  
 'Activity_Label' - the activity that was performed  
   
-Activity Labels  
+#Activity Labels  
   
 'WALKING' (value '1'): subject walked during test  
 'WAKLING_UPSTAIRS' (value '2'): subject walked upstairs during test  
@@ -13,7 +13,8 @@ Activity Labels
 'SITTING' (value '4'): subject was sitting during test  
 'STANDING' (value '5'): subject was standing during test  
 'LAYING' (value '6'): subject was laying during test  
-Description of abbreviations:  
+
+#Description of abbreviations:  
   
 t represents time measurements  
 f represents frequency measurements  
@@ -24,7 +25,8 @@ Gyro = gyroscopic measurements
 Jerk = sudden movement acceleration  
 Mag = magnitude of movement  
 '-XYZ' is used to denoted 3-axial signals in directions X, Y and Z.  
-Measurements  
+
+#Measurements  
   
 tBodyAcc-XYZ  
 tGravityAcc-XYZ  
@@ -89,7 +91,7 @@ std(): standard deviation
 - Data combining subTrain,xTrain and yTrain  
   
 12)mergeData:  
--Data merged for testData and trainData  
+- Data merged for testData and trainData  
   
 13)cleanData:  
 - Tidy Data set  
